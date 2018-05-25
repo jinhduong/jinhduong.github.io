@@ -3,22 +3,40 @@
 
 <head>
     <title>jinhduong blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
 </head>
 <style>
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
     }
+
+    .container {
+        margin-top: 20px;
+    }
+
+    img {
+        max-width: 100px;
+        display: block;
+    }
+
+    .box {
+        background: #FAFAFA;
+    }
 </style>
 
 <body>
-    My blog now move to:
-    <a href="https://www.jinhduong.com">https://www.jinhduong.com</a>
-    <br> This site will be auto redirect
-    <strong id="time"></strong>(s)
+    <div class="container">
+        <div class="box">
+            <img src="https://image.flaticon.com/icons/svg/488/488639.svg"> My blog now move to:
+            <a href="https://www.jinhduong.com">https://www.jinhduong.com</a>
+            <br> This site will be auto redirect after
+            <strong id="time"></strong>(s)...
+        </div>
+    </div>
 </body>
 <script>
     (function () {
-        var timer = 5;
+        var timer = 100;
         var _flag = 0;
         var $item = document.getElementById('time');
 
