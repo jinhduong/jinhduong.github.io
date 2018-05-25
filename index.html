@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jinhduong blog</title>
+</head>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+</style>
+
+<body>
+    My blog now move to:
+    <a href="https://www.jinhduong.com">https://www.jinhduong.com</a>
+    <br> This site will be auto redirect
+    <strong id="time"></strong>(s)
+</body>
+<script>
+    (function () {
+        var timer = 5;
+        var _flag = 0;
+        var $item = document.getElementById('time');
+
+        $item.textContent = timer;
+
+        var waiter = setInterval(function () {
+            if (_flag === timer - 1) {
+                location.href = 'https://www.jinhduong.com';
+            };
+            _flag++;
+            $item.textContent = timer - _flag;
+        }, 1000);
+    })()
+</script>
+
+</html>
